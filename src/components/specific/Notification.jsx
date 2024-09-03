@@ -13,6 +13,7 @@ import {
 import { sampleNotifications } from "../../constants/samepleData";
 import { memo } from "react";
 import { Done as AcceptIcon, Close as DeclineIcon } from "@mui/icons-material";
+import { transformImage } from "../../lib/features";
 
 const Notification = () => {
   const friendRequestHandler = ({ _id, accept }) => {
@@ -22,7 +23,16 @@ const Notification = () => {
     <Dialog open>
       <Stack p={{ xs: "1rem", sm: "2rem" }} maxWidth={"30rem"}>
         <DialogTitle>Notifications</DialogTitle>
-        <Stack sx={{maxHeight: "30rem", overflowY: "auto"}}>
+        <Stack
+          sx={{
+            maxHeight: "30rem",
+            overflowY: "auto",
+            scrollbarWidth: "none", // For Firefox
+            "&::-webkit-scrollbar": {
+              display: "none", // For Chrome, Safari, and Edge
+            },
+          }}
+        >
           {sampleNotifications.length > 0 ? (
             sampleNotifications.map(({ sender, _id }) => (
               <NotificationItem
@@ -50,7 +60,7 @@ const NotificationItem = memo(({ sender, _id, handler }) => {
         spacing={"1rem"}
         width={"100%"}
       >
-        <Avatar src={sender.avatar} />
+        <Avatar src={transformImage(sender.avatar)} />
         <Typography
           variant="body1"
           sx={{

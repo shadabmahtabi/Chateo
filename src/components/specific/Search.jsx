@@ -42,7 +42,16 @@ const Search = () => {
             ),
           }}
         />
-        <List sx={{maxHeight: "25rem", overflowY: "auto"}}>
+        <List
+          sx={{
+            maxHeight: "25rem",
+            overflowY: "auto",
+            scrollbarWidth: "none", // For Firefox
+            "&::-webkit-scrollbar": {
+              display: "none", // For Chrome, Safari, and Edge
+            },
+          }}
+        >
           {users.map((itm) => {
             return (
               <UserItem

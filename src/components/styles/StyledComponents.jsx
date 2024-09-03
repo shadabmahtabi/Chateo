@@ -1,5 +1,6 @@
 import { styled } from "@mui/material";
 import { Link as LinkComponent} from "react-router-dom"
+import { greyColor } from "../../constants/color";
 
 export const VisuallyHiddenInput = styled("input")({
     position: "absolute",
@@ -20,4 +21,14 @@ export const Link = styled(LinkComponent)({
     '&:hover': {
         backgroundColor: "#f0f0f0",
     }
+})
+
+export const InputBox = styled('input')({
+    width: "100%",
+    height: "100%",
+    border: "none",
+    outline: "none",
+    padding: "0 3rem",
+    borderRadius: "1.5rem",
+    backgroundColor: `${greyColor}`
 })
