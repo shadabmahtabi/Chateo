@@ -74,56 +74,6 @@ export const sampleUsers = [
     name: "John Doe",
     avatar: "https://www.w3schools.com/howto/img_avatar.png",
   },
-  {
-    _id: 1,
-    name: "John Doe",
-    avatar: "https://www.w3schools.com/howto/img_avatar.png",
-  },
-  {
-    _id: 2,
-    name: "John Doe",
-    avatar: "https://www.w3schools.com/howto/img_avatar.png",
-  },
-  {
-    _id: 3,
-    name: "John Doe",
-    avatar: "https://www.w3schools.com/howto/img_avatar.png",
-  },
-  {
-    _id: 4,
-    name: "John Doe",
-    avatar: "https://www.w3schools.com/howto/img_avatar.png",
-  },
-  {
-    _id: 5,
-    name: "John Doe",
-    avatar: "https://www.w3schools.com/howto/img_avatar.png",
-  },
-  {
-    _id: 1,
-    name: "John Doe",
-    avatar: "https://www.w3schools.com/howto/img_avatar.png",
-  },
-  {
-    _id: 2,
-    name: "John Doe",
-    avatar: "https://www.w3schools.com/howto/img_avatar.png",
-  },
-  {
-    _id: 3,
-    name: "John Doe",
-    avatar: "https://www.w3schools.com/howto/img_avatar.png",
-  },
-  {
-    _id: 4,
-    name: "John Doe",
-    avatar: "https://www.w3schools.com/howto/img_avatar.png",
-  },
-  {
-    _id: 5,
-    name: "John Doe",
-    avatar: "https://www.w3schools.com/howto/img_avatar.png",
-  },
 ];
 
 export const sampleNotifications = [

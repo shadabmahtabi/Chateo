@@ -1,21 +1,17 @@
+import { useInputValidation } from "6pp";
 import {
-  Avatar,
   Button,
   Dialog,
   DialogTitle,
-  InputAdornment,
-  List,
-  ListItem,
   Stack,
   TextField,
   Typography,
 } from "@mui/material";
+import { useState } from "react";
 import { sampleUsers } from "../../constants/samepleData";
 import UserItem from "../shared/UserItem";
-import { useInputValidation } from "6pp";
-import { useState } from "react";
 
-const NewGroup = () => {
+const NewGroup = ({setIsNewGroup}) => {
   const groupName = useInputValidation("");
   const [members, setMembers] = useState(sampleUsers);
   const [selectedMembers, setSelectedMembers] = useState([]);
@@ -27,10 +23,13 @@ const NewGroup = () => {
   };
 
   const submitHandler = () => {};
-  const closeHandler = () => {};
+  const closeHandler = () => {
+    setSelectedMembers([])
+    setIsNewGroup(false)
+  };
 
   return (
-    <Dialog open>
+    <Dialog open onClose={closeHandler}>
       <Stack
         p={{ xs: "1rem", sm: "2rem" }}
         maxWidth={"25rem"}
@@ -48,9 +47,9 @@ const NewGroup = () => {
           sx={{
             maxHeight: { xs: "25rem", sm: "20rem" },
             overflowY: "auto",
-            scrollbarWidth: "none", // For Firefox
+            scrollbarWidth: "none",
             "&::-webkit-scrollbar": {
-              display: "none", // For Chrome, Safari, and Edge
+              display: "none",
             },
           }}
         >

@@ -15,12 +15,12 @@ import { memo } from "react";
 import { Done as AcceptIcon, Close as DeclineIcon } from "@mui/icons-material";
 import { transformImage } from "../../lib/features";
 
-const Notification = () => {
+const Notification = ({setIsNotification}) => {
   const friendRequestHandler = ({ _id, accept }) => {
     console.log("Friend Request: ", accept);
   };
   return (
-    <Dialog open>
+    <Dialog open onClose={() => setIsNotification(false)}>
       <Stack p={{ xs: "1rem", sm: "2rem" }} maxWidth={"30rem"}>
         <DialogTitle>Notifications</DialogTitle>
         <Stack

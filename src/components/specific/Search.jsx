@@ -12,7 +12,7 @@ import { useState } from "react";
 import { sampleUsers } from "../../constants/samepleData";
 import UserItem from "../shared/UserItem";
 
-const Search = () => {
+const Search = ({setIsSearch}) => {
   const [users, setUsers] = useState(sampleUsers);
   const searchInput = useInputValidation("");
   let isLoadingSendFriendRequest = false;
@@ -21,7 +21,7 @@ const Search = () => {
     console.log("Friend");
   };
   return (
-    <Dialog open>
+    <Dialog open onClose={() => setIsSearch(false)}>
       <Stack
         p={"2rem"}
         direction={"column"}
@@ -46,9 +46,9 @@ const Search = () => {
           sx={{
             maxHeight: "25rem",
             overflowY: "auto",
-            scrollbarWidth: "none", // For Firefox
+            scrollbarWidth: "none",
             "&::-webkit-scrollbar": {
-              display: "none", // For Chrome, Safari, and Edge
+              display: "none",
             },
           }}
         >

@@ -114,17 +114,17 @@ const Header = () => {
 
       {isSearch && (
         <Suspense fallback={<Backdrop open />}>
-          <SearchDialog />
+          <SearchDialog setIsSearch={setIsSearch} />
         </Suspense>
       )}
       {isNotification && (
         <Suspense fallback={<Backdrop open />}>
-          <NotificationDialog />
+          <NotificationDialog setIsNotification={setIsNotification} />
         </Suspense>
       )}
       {isNewGroup && (
         <Suspense fallback={<Backdrop open />}>
-          <NewGroupDialog />
+          <NewGroupDialog setIsNewGroup={setIsNewGroup}/>
         </Suspense>
       )}
     </>

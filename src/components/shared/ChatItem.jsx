@@ -2,6 +2,7 @@ import React, { memo } from "react";
 import { Link } from "../styles/StyledComponents";
 import { Box, Stack, Typography } from "@mui/material";
 import AvatarCard from "./AvatarCard";
+import { blackColor } from "../../constants/color";
 
 const ChatItem = ({
   avatar,
@@ -26,7 +27,7 @@ const ChatItem = ({
           gap: "1rem",
           alignItems: "center",
           padding: "1rem",
-          backgroundColor: sameSender ? "rgba(0,0,0,0.7)" : "unset",
+          backgroundColor: sameSender ? blackColor : "unset",
           color: sameSender ? "white" : "unset",
           position: "relative",
         }}

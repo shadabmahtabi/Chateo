@@ -10,8 +10,16 @@ const ChatList = ({
   newMessagesAlert = [{ chatId: "", count: 0 }],
   handleDeleteChat,
 }) => {
-  return (
-    <Stack width={w} direction={"column"}>
+  return ( 
+    <Stack width={w} direction={"column"} sx={{
+      height: "100%",
+      overflowY: "auto",
+      overflowX: "hidden",
+      scrollbarWidth: "none",
+      "&::-webkit-scrollbar": {
+        display: "none"
+      }
+    }}>
       {chats?.map((data, index) => {
         const { avatar, name, _id, members, groupChat } = data;
         const newMessageAlert = newMessagesAlert.find(
