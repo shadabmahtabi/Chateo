@@ -4,3 +4,8 @@ export const headerGradient =
 export const greyColor = "rgba(0,0,0,0.08)";
 export const blackColor = "rgba(0,0,0,0.7)"
 export const hoverBlackColor = "rgba(0,0,0,0.5)"
+export const mattBlack = "rgba(0,0,0,0.8)"
+export const hoverMattBlack = "rgba(0,0,0,0.7)"
+
+export const pinkColor = "rgba(255, 99, 132, 0.5)"
+export const pinkBorder = "rgba(255, 99, 132, 1)"

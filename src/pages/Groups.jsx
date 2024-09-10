@@ -142,7 +142,14 @@ const Groups = () => {
         alignItems={"center"}
         justifyContent={"center"}
         spacing={"1rem"}
-        padding={"1rem"}
+        sx={{
+          padding: {
+            xs: "5rem 0 1rem 0",
+            sm: "1rem",
+          },
+        }}
+        // padding={"5rem 0 0 0"}
+        // bgcolor={"red"}
       >
         {isEdit ? (
           <>
@@ -217,12 +224,12 @@ const Groups = () => {
               width={"100%"}
               boxSizing={"border-box"}
               padding={{
-                sm: "1rem",
                 xs: "0",
-                md: "1rem 4rem",
+                sm: "1rem",
+                md: "0rem 4rem",
               }}
               // spacing={"0.5rem"}
-              height={{
+              maxHeight={{
                 xs: "60vh",
                 sm: "65vh",
               }}
