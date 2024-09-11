@@ -301,3 +301,32 @@ export const sampleMessages = [
     createdAt: "2024-09-03T10:41:30.630Z",
   },
 ];
+
+export const dashboardData = {
+  users: [
+    {
+      _id: "1",
+      name: "John Doe",
+      avatar: "https://www.w3schools.com/howto/img_avatar.png",
+      username: "john_doe",
+      friends: 20,
+      groups: 5,
+    },
+    {
+      _id: "2",
+      name: "Shadab Alam",
+      avatar: "https://www.w3schools.com/howto/img_avatar.png",
+      username: "shadabmahtabi",
+      friends: 200,
+      groups: 30,
+    },
+    {
+      _id: "3",
+      name: "Sonam Kumari",
+      avatar: "https://www.w3schools.com/howto/img_avatar.png",
+      username: "sonamsingh",
+      friends: 50,
+      groups: 40,
+    },
+  ],
+};
