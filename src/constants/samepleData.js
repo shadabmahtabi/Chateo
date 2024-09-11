@@ -376,4 +376,38 @@ export const dashboardData = {
       },
     },
   ],
+
+  messages: [
+    {
+      _id: "1",
+      attachments: [],
+      content: "Hello",
+      sender: {
+        _id: "user._id",
+        name: "John Doe",
+        avatar: "https://www.w3schools.com/howto/img_avatar.png"
+      },
+      chat: "chatId",
+      groupChat: false,
+      createdAt: "2022-01-01T12:00:00.000Z",
+    },
+    {
+      _id: "2",
+      attachments: [
+        {
+          public_id: "dj,sldfjs",
+          url: "https://www.w3schools.com/howto/img_avatar.png",
+        },
+      ],
+      content: "",
+      sender: {
+        _id: "usjdk",
+        name: "John Boi",
+        avatar: "https://www.w3schools.com/howto/img_avatar.png"
+      },
+      chat: "chatId",
+      groupChat: true,
+      createdAt: "2022-01-01T12:00:00.000Z",
+    },
+  ],
 };
